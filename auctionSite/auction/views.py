@@ -30,7 +30,8 @@ def login_view(request):
 	return render(request, "auction/login.html")
 
 def logout_view(request):
-	pass
+	logout(request)
+	return HttpResponseRedirect(reverse('index'))
 
 def register(request):
 	pass
