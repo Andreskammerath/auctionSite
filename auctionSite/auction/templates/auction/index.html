@@ -1,0 +1,8 @@
+{% extends "auction/layout.html"%}
+{% block head %} <title>Bienvenido a subastas Kammerath</title> {% endblock%} 
+{% block body%}
+{% if request.user.is_authenticated %}
+	<h2>Bienvenido {{request.user.username}}</h2>
+{% endif %}
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
